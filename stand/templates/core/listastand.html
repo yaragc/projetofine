@@ -1,7 +1,8 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Listas de Stands{% endblock %}
 
-{% block content %}
+{% block center %}
 
 <div class="mt-5">
 
@@ -24,9 +25,9 @@
               
 
                 <td>
-                    <a href="{% url 'core:listastand' x.pk %}"><i class="fas fa-edit"></i></a>
-                    <a href="{% url 'core:apagarstand' x.pk %}"><i class="fas fa-trash-alt"></i></a>
-                    <a href="{% url 'core:detalharstand' x.pk %}"><i class="fas fa-search"></i></a>
+                    <a href="{% url 'listastand'  %}"><i class="fas fa-edit"></i></a>
+                    <a href="{% url 'apagarstand' x.pk %}"><i class="fas fa-trash-alt"></i></a>
+                    <a href="{% url 'detalharstand' x.pk %}"><i class="fas fa-search"></i></a>
                 </td>
             </tr>
            
@@ -39,7 +40,7 @@
 </div>
 
         <div class="mb-3">
-            <a href="{% url 'CriarStand' %}" class="btn btn-primary">Adicionar Novo</a>
+            <a href="{% url 'formstand' %}" class="btn btn-primary">Adicionar Novo</a>
         </div>
 
 
