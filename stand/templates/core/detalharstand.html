@@ -4,7 +4,7 @@
 Detalhes das Reservas
 {% endblock %}
 
-{% block content %}
+{% block center %}
     <div class="row">
         <div class="col-12">
             <div class="jumbotron jumbotron-fluid">
@@ -21,15 +21,15 @@ Detalhes das Reservas
             <p class="card-text">{{stand.localizacao}}</p>
 
             <h5 class="card-title">Valor</h5>
-            <p class="card-text">{{reserva.valor}}</p>
+            <p class="card-text">{{stand.valor}}</p>
 
         
         </div>
       
        
     </div>
-    <a href="{% url 'listarstand' %}" class="btn btn-secondary">Voltar</a>
-        <a href="{% url 'updatestand' core.pk %}" class="btn btn-primary">Editar</a>
-        <a href="{% url 'apagarstand' core.pk %}" class="btn btn-danger">Apagar</a>
+        <a href="{% url 'stand:listastand' %}" class="btn btn-secondary">Voltar</a>
+        <a href="{% url 'stand:updateStand' stand.pk %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'stand:apagarstand' stand.pk %}" class="btn btn-danger">Apagar</a>
         
 {% endblock %}
