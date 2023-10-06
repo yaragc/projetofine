@@ -28,5 +28,8 @@ Detalhes das Reservas
       
        
     </div>
-    <a href="/listarStand" class="btn btn-secondary">Voltar</a>
+    <a href="{% url 'listarstand' %}" class="btn btn-secondary">Voltar</a>
+        <a href="{% url 'updatestand' core.pk %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'apagarstand' core.pk %}" class="btn btn-danger">Apagar</a>
+        
 {% endblock %}

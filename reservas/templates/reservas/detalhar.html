@@ -20,9 +20,9 @@
 
         <br><br><br><br><br><br><br><br>
 
-        <a href="{% url 'listar' %}" class="btn btn-secondary">Voltar</a>
-        <a href="{% url 'editar' reservas.pk %}" class="btn btn-primary">Editar</a>
-        <a href="{% url 'apagar' reservas.pk %}" class="btn btn-danger">Apagar</a>
+        <a href="{% url 'reservas:listar' %}" class="btn btn-secondary">Voltar</a>
+        <a href="{% url 'reservas:editar' reservas.pk %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'reservas:apagar' reservas.pk %}" class="btn btn-danger">Apagar</a>
         
 
       </div>

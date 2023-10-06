@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Nome da empresa: <strong>{{ reserva.nome_empresa }}</strong></h5>
                         <p class="card-text"></p>
-                        <a href="{% url 'detalhar' reserva.pk %}" class="btn btn-secondary">detalhar</a>
+                        <a href="{% url 'reservas:detalhar' reserva.pk %}" class="btn btn-secondary">detalhar</a>
                     </div>
                 </div>
             </div>

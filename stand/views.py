@@ -19,14 +19,14 @@ class CriarStand(views.SuccessMessageMixin,CreateView):
     model = Stand
     form_class = StandForm
     template_name = 'core/formstand.html'
-    success_url = reverse_lazy('listastand')
+    success_url = reverse_lazy('stand:listastand')
     success_message = "Stand criado com sucesso!"
 
 
 class Delete(views.SuccessMessageMixin,DeleteView):
     model = Stand
     template_name = 'core/apagarstand.html'
-    success_url = reverse_lazy("listastand")
+    success_url = reverse_lazy("stand:listastand")
     context_object_name= "stand"
     success_message = "Stand deletado com sucesso!"
 
@@ -34,7 +34,7 @@ class Delete(views.SuccessMessageMixin,DeleteView):
 class StandUpdateView(views.SuccessMessageMixin,UpdateView):
   model = Stand
   form_class = StandForm
-  success_url = reverse_lazy("listastand")
+  success_url = reverse_lazy("stand:listastand")
   template_name = "core/formstand.html"
   success_message = "Stand atualizado com sucesso!"
 
